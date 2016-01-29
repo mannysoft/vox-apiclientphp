@@ -1,5 +1,5 @@
 {
-    "name": "mannysoft/voxapiclientphp",
+    "name": "mannysoft/voxboneapiclient",
     "type": "library",
     "description": "The Provisioning API enables Voxbone customers to automate the ordering and configuration of phone numbers and channels.n",
     "homepage": "https://www.voxbone.com",
