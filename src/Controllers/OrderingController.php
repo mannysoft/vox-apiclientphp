@@ -10,7 +10,7 @@ namespace APIv3SandboxLib\Controllers;
 use APIv3SandboxLib\APIException;
 use APIv3SandboxLib\APIHelper;
 use APIv3SandboxLib\Configuration;
-use Unirest\Unirest;
+use Unirest\Request;
 
 class OrderingController {
     /**
@@ -34,7 +34,7 @@ class OrderingController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
+        $request = Request::get($queryUrl, $headers);
 
         //and invoke the API call request to fetch the response
         $response = Unirest::getResponse($request);
