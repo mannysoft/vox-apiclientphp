@@ -34,10 +34,10 @@ class OrderingController {
         );
 
         //prepare API request
-        $request = Request::get($queryUrl, $headers);
+        $response = Request::get($queryUrl, $headers);
 
         //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        //$response = Unirest::getResponse($request);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -71,10 +71,10 @@ class OrderingController {
         );
 
         //prepare API request
-        $request = Unirest::put($queryUrl, $headers, json_encode($body));
+        $response = Request::put($queryUrl, $headers, json_encode($body));
 
         //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        //$response = Unirest::getResponse($request);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -115,10 +115,10 @@ class OrderingController {
         );
 
         //prepare API request
-        $request = Unirest::post($queryUrl, $headers, json_encode($body));
+        $response = Request::post($queryUrl, $headers, json_encode($body));
 
         //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        //$response = Unirest::getResponse($request);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -162,10 +162,10 @@ class OrderingController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
+        $response = Request::get($queryUrl, $headers);
 
         //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        //$response = Unirest::getResponse($request);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -209,10 +209,10 @@ class OrderingController {
         );
 
         //prepare API request
-        $request = Unirest::post($queryUrl, $headers, json_encode($quantity));
+        $response = Request::post($queryUrl, $headers, json_encode($quantity));
 
         //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        //$response = Unirest::getResponse($request);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -251,10 +251,10 @@ class OrderingController {
         );
 
         //prepare API request
-        $request = Unirest::delete($queryUrl, $headers);
+        $response = Request::delete($queryUrl, $headers);
 
         //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        //$response = Unirest::getResponse($request);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -292,10 +292,10 @@ class OrderingController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
+        $response = Request::get($queryUrl, $headers);
 
         //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        //$response = Unirest::getResponse($request);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -351,10 +351,10 @@ class OrderingController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
+        $response = Request::get($queryUrl, $headers);
 
         //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        //$response = Unirest::getResponse($request);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -388,10 +388,10 @@ class OrderingController {
         );
 
         //prepare API request
-        $request = Unirest::post($queryUrl, $headers, json_encode($didIds));
+        $response = Request::post($queryUrl, $headers, json_encode($didIds));
 
         //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        //$response = Unirest::getResponse($request);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -429,10 +429,10 @@ class OrderingController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
+        $response = Request::get($queryUrl, $headers);
 
         //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        //$response = Unirest::getResponse($request);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -470,10 +470,10 @@ class OrderingController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
+        $response = Request::get($queryUrl, $headers);
 
         //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        //$response = Unirest::getResponse($request);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
