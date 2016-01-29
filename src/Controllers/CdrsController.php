@@ -10,7 +10,7 @@ namespace APIv3SandboxLib\Controllers;
 use APIv3SandboxLib\APIException;
 use APIv3SandboxLib\APIHelper;
 use APIv3SandboxLib\Configuration;
-use Unirest\Unirest;
+use Unirest\Request;
 
 class CdrsController {
     /**
@@ -45,9 +45,9 @@ class CdrsController {
         );
 
         //prepare API request
-        $request = Unirest::post($queryUrl, $headers);
+        $response = Request::post($queryUrl, $headers);
         //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        //$response = Unirest::getResponse($request);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -78,10 +78,10 @@ class CdrsController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
+        $response = Request::get($queryUrl, $headers);
 
         //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        //$response = Unirest::getResponse($request);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -118,10 +118,10 @@ class CdrsController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
+        $response = Request::get($queryUrl, $headers);
 
         //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        //$response = Unirest::getResponse($request);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
