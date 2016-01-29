@@ -17,7 +17,7 @@
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "mashape/unirest-php": "dev-master"
+        "mashape/unirest-php": "2.*"
     },
     "autoload": {
         "psr-4": {
