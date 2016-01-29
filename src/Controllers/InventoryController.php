@@ -10,7 +10,7 @@ namespace APIv3SandboxLib\Controllers;
 use APIv3SandboxLib\APIException;
 use APIv3SandboxLib\APIHelper;
 use APIv3SandboxLib\Configuration;
-use Unirest\Unirest;
+use Unirest\Request;
 
 class InventoryController {
     /**
@@ -89,10 +89,7 @@ class InventoryController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
-
-        //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        $response = Request::get($queryUrl, $headers);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -123,10 +120,7 @@ class InventoryController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
-
-        //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        $response = Request::get($queryUrl, $headers);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -191,10 +185,7 @@ class InventoryController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
-
-        //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        $response = Request::get($queryUrl, $headers);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -232,10 +223,7 @@ class InventoryController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
-
-        //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        $response = Request::get($queryUrl, $headers);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -273,10 +261,7 @@ class InventoryController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
-
-        //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        $response = Request::get($queryUrl, $headers);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -307,10 +292,7 @@ class InventoryController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
-
-        //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        $response = Request::get($queryUrl, $headers);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -341,10 +323,7 @@ class InventoryController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
-
-        //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        $response = Request::get($queryUrl, $headers);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -375,10 +354,7 @@ class InventoryController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
-
-        //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        $response = Request::get($queryUrl, $headers);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -425,10 +401,7 @@ class InventoryController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
-
-        //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        $response = Request::get($queryUrl, $headers);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -466,10 +439,7 @@ class InventoryController {
         );
 
         //prepare API request
-        $request = Unirest::get($queryUrl, $headers);
-
-        //and invoke the API call request to fetch the response
-        $response = Unirest::getResponse($request);
+        $response = Request::get($queryUrl, $headers);
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
