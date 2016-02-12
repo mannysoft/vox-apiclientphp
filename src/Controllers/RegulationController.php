@@ -12,6 +12,7 @@ use APIv3SandboxLib\APIHelper;
 use APIv3SandboxLib\Configuration;
 use Unirest\Request;
 use Unirest\File;
+use Illuminate\Support\Facades\Config; 
 
 class RegulationController {
    /**
@@ -25,6 +26,7 @@ class RegulationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address';
@@ -71,6 +73,7 @@ class RegulationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address/{addressId}';
@@ -113,6 +116,7 @@ class RegulationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address/{addressId}';
@@ -178,6 +182,7 @@ class RegulationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address';
@@ -233,6 +238,7 @@ class RegulationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address/{addressId}/link';
@@ -275,6 +281,7 @@ class RegulationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address/unlink';
@@ -318,6 +325,7 @@ class RegulationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/zipcode';
@@ -363,6 +371,7 @@ class RegulationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address/{addressId}/proof';
@@ -407,6 +416,7 @@ class RegulationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address/{addressId}/verification';
@@ -453,6 +463,7 @@ class RegulationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address/{addressId}/validation';
