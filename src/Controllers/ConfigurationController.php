@@ -12,6 +12,7 @@ use APIv3SandboxLib\APIHelper;
 use APIv3SandboxLib\Configuration;
 
 use Unirest\Request;
+use Illuminate\Support\Facades\Config;
 
 class ConfigurationController {
     /**
@@ -23,6 +24,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/configuration';
@@ -65,6 +67,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/capacitygroup';
@@ -109,6 +112,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/capacitygroup';
@@ -146,6 +150,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/capacitygroup/{capacityGroupId}';
@@ -198,6 +203,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/faxuri';
@@ -244,6 +250,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/faxuri';
@@ -281,6 +288,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/faxuri/{faxUriId}';
@@ -333,6 +341,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/voiceuri';
@@ -379,6 +388,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/voiceuri';
@@ -416,6 +426,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/voiceuri/{voiceUriId}';
@@ -456,6 +467,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/pop';
@@ -490,6 +502,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslinkgroup';
@@ -526,6 +539,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslinkgroup';
@@ -564,6 +578,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslinkgroup/{smsLinkGroupId}	';
@@ -612,6 +627,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslink';
@@ -656,6 +672,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslink';
@@ -693,6 +710,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslink/{smsLinkId}';
@@ -735,6 +753,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/voiceuri/{voiceUriId}';
@@ -776,6 +795,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/capacitygroup/{capacityGroupId}';
@@ -817,6 +837,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/faxuri/{faxUriId}';
@@ -858,6 +879,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslink/{smsLinkId}';
@@ -899,6 +921,7 @@ class ConfigurationController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslink/{smsLinkId}';
