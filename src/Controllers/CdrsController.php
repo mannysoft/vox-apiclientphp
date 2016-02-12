@@ -12,6 +12,8 @@ use APIv3SandboxLib\APIHelper;
 use APIv3SandboxLib\Configuration;
 use Unirest\Request;
 
+use Illuminate\Support\Facades\Config;
+
 class CdrsController {
     /**
      * Request the generation of a call report for a full month
@@ -24,6 +26,7 @@ class CdrsController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/cdrs/cdrsfile/request/{year}/{month}';
@@ -64,6 +67,7 @@ class CdrsController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/cdrs/cdrsfile';
@@ -100,6 +104,7 @@ class CdrsController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/cdrs/cdrsfile/{fileName}';
