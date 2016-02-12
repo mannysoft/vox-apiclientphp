@@ -11,6 +11,7 @@ use APIv3SandboxLib\APIException;
 use APIv3SandboxLib\APIHelper;
 use APIv3SandboxLib\Configuration;
 use Unirest\Request;
+use Illuminate\Support\Facades\Config;
 
 class InventoryController {
     /**
@@ -54,6 +55,7 @@ class InventoryController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/did';
@@ -106,6 +108,7 @@ class InventoryController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/creditpackage';
@@ -157,6 +160,7 @@ class InventoryController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/didgroup';
@@ -204,6 +208,7 @@ class InventoryController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/country/{countryCodeA3}/restriction';
@@ -242,6 +247,7 @@ class InventoryController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/country/{countryCodeA3}/state';
@@ -278,6 +284,7 @@ class InventoryController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/trunk';
@@ -309,6 +316,7 @@ class InventoryController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/zone';
@@ -340,6 +348,7 @@ class InventoryController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/feature';
@@ -379,6 +388,7 @@ class InventoryController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/country';
@@ -420,6 +430,7 @@ class InventoryController {
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
+        $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/country/{countryCodeA3}';
