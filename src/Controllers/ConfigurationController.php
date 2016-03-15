@@ -46,7 +46,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -97,7 +97,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -135,7 +135,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -178,7 +178,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -235,7 +235,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -273,7 +273,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -316,7 +316,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -373,7 +373,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -411,7 +411,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -454,7 +454,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -489,7 +489,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -524,7 +524,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -562,7 +562,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -581,7 +581,7 @@ class ConfigurationController {
         $queryBuilder = Config::get('voxbone.base_uri');
         
         //prepare query string for API call
-        $queryBuilder = $queryBuilder.'/configuration/smslinkgroup/{smsLinkGroupId}	';
+        $queryBuilder = $queryBuilder.'/configuration/smslinkgroup/{smsLinkGroupId} ';
 
         //process optional query parameters
         APIHelper::appendUrlWithTemplateParameters($queryBuilder, array (
@@ -606,7 +606,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -657,7 +657,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -695,7 +695,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -738,7 +738,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -780,7 +780,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -822,7 +822,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -864,7 +864,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -906,7 +906,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -948,7 +948,7 @@ class ConfigurationController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
