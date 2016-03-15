@@ -95,7 +95,7 @@ class InventoryController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -127,7 +127,7 @@ class InventoryController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -193,7 +193,7 @@ class InventoryController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -232,7 +232,7 @@ class InventoryController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -271,7 +271,7 @@ class InventoryController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -303,7 +303,7 @@ class InventoryController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -335,7 +335,7 @@ class InventoryController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -367,7 +367,7 @@ class InventoryController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -415,7 +415,7 @@ class InventoryController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
@@ -454,7 +454,7 @@ class InventoryController {
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            throw new APIException("HTTP Response Not OK", $response->code);
+            return $response;
         }
 
         return $response->body;
