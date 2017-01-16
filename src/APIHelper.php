@@ -73,7 +73,15 @@ class APIHelper {
             $hasParams = true;
 
             if(is_array($value)) {
-                $queryBuilder = $queryBuilder . urldecode(http_build_query(array($key => $value)));
+                $i = 0;
+                foreach ($value as $v) {
+                    if ($i == 0) {
+                        $queryBuilder = $queryBuilder . $key . '=' . $v;
+                    } else {
+                        $queryBuilder = $queryBuilder . '&' . $key . '=' . $v;
+                    }
+                    $i ++;
+                }
             } else {
                 $queryBuilder = $queryBuilder . $key . '=' . $value;
             }
