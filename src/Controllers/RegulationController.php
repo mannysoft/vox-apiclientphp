@@ -22,7 +22,8 @@ class RegulationController {
      * @return AddressIdentifierModel response from the API call*/
     public function address (
                 $address,
-                $proof = NULL) 
+                $proof = NULL,
+                $proofOfIdentityDocument = null)
     {
         //the base uri for api requests
         $queryBuilder = Configuration::BASEURI;
@@ -42,11 +43,26 @@ class RegulationController {
         $body = '--XXX'."\n".'Content-ID: createRegulationAddressRequest'."\n".'Content-type: application/json'."\n\n".''
             . json_encode($address) .
             ''."\n".'--XXX--'."\n".'';
+
         if (!is_null($proof)) {
             $data = file_get_contents($proof);
             $uniProof = File::add($proof);
             $body = $body
                 .'Content-ID: proofOfAddress'."\n"
+                .'Content-Type:'. $uniProof->getMimeType()."\n"
+                .'Content-Disposition: filename="' . $uniProof->getFilename() .'"'. "\n\n"
+                .$data
+                ."\n".'--XXX--' ;
+        }
+
+        if (!is_null($proofOfIdentityDocument)) {
+            
+            $body .= "\n\n"; // we add line break
+
+            $data = file_get_contents($proof);
+            $uniProof = File::add($proof);
+            $body = $body
+                .'Content-ID: proofOfIdentityDocument'."\n"
                 .'Content-Type:'. $uniProof->getMimeType()."\n"
                 .'Content-Disposition: filename="' . $uniProof->getFilename() .'"'. "\n\n"
                 .$data
