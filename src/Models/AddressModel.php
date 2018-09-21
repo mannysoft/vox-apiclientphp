@@ -100,6 +100,8 @@ class AddressModel implements JsonSerializable {
      */
     protected $destinationCountryCodeA3;
 
+    protected $identityDocumentProof = null;
+
     /**
      * Constructor to set initial or default values of member properties
 	 * @param   string            $salutation                 Initialization value for the property $this->salutation              
@@ -120,24 +122,23 @@ class AddressModel implements JsonSerializable {
      */
     public function __construct()
     {
-        if(15 == func_num_args())
-        {
-            $this->salutation               = func_get_arg(0);
-            $this->companyName              = func_get_arg(1);
-            $this->companyDescription       = func_get_arg(2);
-            $this->firstName                = func_get_arg(3);
-            $this->lastName                 = func_get_arg(4);
-            $this->countryCodeA3            = func_get_arg(5);
-            $this->city                     = func_get_arg(6);
-            $this->zipCode                  = func_get_arg(7);
-            $this->streetName               = func_get_arg(8);
-            $this->buildingNumber           = func_get_arg(9);
-            $this->buildingLetter           = func_get_arg(10);
-            $this->customerReference        = func_get_arg(11);
-            $this->extraFields              = func_get_arg(12);
-            $this->didType                  = func_get_arg(13);
-            $this->destinationCountryCodeA3 = func_get_arg(14);
-        }
+    
+        $this->salutation               = func_get_arg(0);
+        $this->companyName              = func_get_arg(1);
+        $this->companyDescription       = func_get_arg(2);
+        $this->firstName                = func_get_arg(3);
+        $this->lastName                 = func_get_arg(4);
+        $this->countryCodeA3            = func_get_arg(5);
+        $this->city                     = func_get_arg(6);
+        $this->zipCode                  = func_get_arg(7);
+        $this->streetName               = func_get_arg(8);
+        $this->buildingNumber           = func_get_arg(9);
+        $this->buildingLetter           = func_get_arg(10);
+        $this->customerReference        = func_get_arg(11);
+        $this->extraFields              = func_get_arg(12);
+        $this->didType                  = func_get_arg(13);
+        $this->destinationCountryCodeA3 = func_get_arg(14);
+        $this->identityDocumentProof    = @func_get_arg(15);
     }
 
     /**
@@ -200,6 +201,10 @@ class AddressModel implements JsonSerializable {
         $json['extraFields']              = $this->extraFields;
         $json['didType']                  = $this->didType;
         $json['destinationCountryCodeA3'] = $this->destinationCountryCodeA3;
+        if ($this->identityDocumentProof) {
+            $json['identityDocumentProof']    = $this->identityDocumentProof;
+        }
+        
         return $json;
     }
 }
