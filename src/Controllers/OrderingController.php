@@ -76,13 +76,8 @@ class OrderingController {
         //prepare API request
         $response = Request::put($queryUrl, $headers, json_encode($body));
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
-
         //Error handling using HTTP status codes
-        if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
-            return $response;
-        }
+        APIHelper::error($response);
 
         return $response->body;
     }
