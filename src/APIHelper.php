@@ -118,7 +118,7 @@ class APIHelper {
     {
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
             if ($response->code == 503) {
-                die('Provider is not available. Please try again later.');
+                die('our provider is not available this time. Please try again later.');
             }
             return $response;
         }
