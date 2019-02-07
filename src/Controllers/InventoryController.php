@@ -54,8 +54,8 @@ class InventoryController {
                 $didIds = NULL) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/did';
@@ -107,8 +107,8 @@ class InventoryController {
     public function getCreditPackages () 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/creditpackage';
@@ -159,8 +159,8 @@ class InventoryController {
                 $featureIds = NULL) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/didgroup';
@@ -207,8 +207,8 @@ class InventoryController {
                 $countryCodeA3) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/country/{countryCodeA3}/restriction';
@@ -246,8 +246,8 @@ class InventoryController {
                 $countryCodeA3) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/country/{countryCodeA3}/state';
@@ -283,8 +283,8 @@ class InventoryController {
     public function getTrunks () 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/trunk';
@@ -315,8 +315,8 @@ class InventoryController {
     public function getZones () 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/zone';
@@ -347,8 +347,8 @@ class InventoryController {
     public function getFeatures () 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/feature';
@@ -387,8 +387,8 @@ class InventoryController {
                 $didType = NULL) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/country';
@@ -429,8 +429,8 @@ class InventoryController {
                 $countryCodeA3) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/inventory/country/{countryCodeA3}';

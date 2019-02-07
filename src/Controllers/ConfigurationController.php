@@ -23,8 +23,7 @@ class ConfigurationController {
                 $body) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/configuration';
@@ -41,8 +40,7 @@ class ConfigurationController {
 
         //prepare API request
         $response = Request::post($queryUrl, $headers, json_encode($body));
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -66,8 +64,7 @@ class ConfigurationController {
                 $e164 = NULL) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/capacitygroup';
@@ -92,9 +89,6 @@ class ConfigurationController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
-
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
             return $response;
@@ -111,8 +105,7 @@ class ConfigurationController {
                 $body) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/capacitygroup';
@@ -130,8 +123,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::put($queryUrl, $headers, json_encode($body));
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -149,8 +141,7 @@ class ConfigurationController {
                 $capacityGroupId) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/capacitygroup/{capacityGroupId}';
@@ -173,8 +164,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::delete($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -202,8 +192,7 @@ class ConfigurationController {
                 $csid = NULL) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/faxuri';
@@ -230,9 +219,6 @@ class ConfigurationController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
-
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
             return $response;
@@ -249,8 +235,7 @@ class ConfigurationController {
                 $body) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/faxuri';
@@ -268,9 +253,6 @@ class ConfigurationController {
         //prepare API request
         $response = Request::put($queryUrl, $headers, json_encode($body));
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
-
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
             return $response;
@@ -287,8 +269,7 @@ class ConfigurationController {
                 $faxUriId) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/faxuri/{faxUriId}';
@@ -311,8 +292,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::delete($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -340,8 +320,7 @@ class ConfigurationController {
                 $description = NULL) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/voiceuri';
@@ -368,8 +347,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -387,8 +365,8 @@ class ConfigurationController {
                 $body) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/voiceuri';
@@ -406,8 +384,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::put($queryUrl, $headers, json_encode($body));
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -425,8 +402,8 @@ class ConfigurationController {
                 $voiceUriId) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/voiceuri/{voiceUriId}';
@@ -449,8 +426,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::delete($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -466,8 +442,8 @@ class ConfigurationController {
     public function getPop () 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/pop';
@@ -484,8 +460,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -501,8 +476,8 @@ class ConfigurationController {
     public function getSmsLinkGroups () 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslinkgroup';
@@ -519,8 +494,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -538,8 +512,8 @@ class ConfigurationController {
                 $body) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslinkgroup';
@@ -557,8 +531,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::put($queryUrl, $headers, json_encode($body));
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -577,8 +550,8 @@ class ConfigurationController {
                 ) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslinkgroup/{smsLinkGroupId} ';
@@ -601,8 +574,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::delete($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -626,8 +598,8 @@ class ConfigurationController {
                 $smsLinkId = NULL) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslink';
@@ -652,8 +624,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -671,8 +642,8 @@ class ConfigurationController {
                 $body) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslink';
@@ -690,8 +661,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::put($queryUrl, $headers, json_encode($body));
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -709,8 +679,8 @@ class ConfigurationController {
                 $smsLinkId) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslink/{smsLinkId}';
@@ -733,8 +703,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::delete($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -752,8 +721,8 @@ class ConfigurationController {
                 $voiceUriId) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/voiceuri/{voiceUriId}';
@@ -775,8 +744,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -794,8 +762,8 @@ class ConfigurationController {
                 $capacityGroupId) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/capacitygroup/{capacityGroupId}';
@@ -817,8 +785,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -836,8 +803,8 @@ class ConfigurationController {
                 $faxUriId) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/faxuri/{faxUriId}';
@@ -859,8 +826,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -878,8 +844,8 @@ class ConfigurationController {
                 $smsLinkId) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslink/{smsLinkId}';
@@ -901,8 +867,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -920,8 +885,8 @@ class ConfigurationController {
                 $smsLinkId) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/configuration/smslink/{smsLinkId}';
@@ -943,8 +908,7 @@ class ConfigurationController {
         //prepare API request
         $response = Request::put($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK

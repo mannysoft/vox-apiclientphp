@@ -20,8 +20,8 @@ class OrderingController {
     public function getAccountBalance () 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/ordering/accountbalance';
@@ -52,8 +52,8 @@ class OrderingController {
                 $body) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/ordering/cart';
@@ -87,8 +87,8 @@ class OrderingController {
                 $body) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/ordering/cart/{cartIdentifier}/product';
@@ -129,8 +129,8 @@ class OrderingController {
                 $reference = NULL) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/ordering/cart';
@@ -172,8 +172,8 @@ class OrderingController {
                 $quantity) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/ordering/cart/{cartIdentifier}/product/{orderProductId}';
@@ -211,8 +211,8 @@ class OrderingController {
                 $cartIdentifier) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/ordering/cart/{cartIdentifier}';
@@ -249,8 +249,8 @@ class OrderingController {
                 $cartIdentifier) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/ordering/cart/{cartIdentifier}/checkout';
@@ -298,8 +298,8 @@ class OrderingController {
                 $dateTo = NULL) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/ordering/order';
@@ -341,8 +341,8 @@ class OrderingController {
                 $didIds) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/ordering/cancel';
@@ -374,8 +374,8 @@ class OrderingController {
                 $cartIdentifier) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/ordering/cart/{cartIdentifier}/';
@@ -411,8 +411,8 @@ class OrderingController {
                 $cartIdentifier) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/ordering/cart/{cartIdentifier}	';

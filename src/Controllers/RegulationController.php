@@ -26,8 +26,8 @@ class RegulationController {
                 $proofOfIdentityDocument = null)
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address';
@@ -70,8 +70,7 @@ class RegulationController {
         }
         //prepare API request
         $response = Request::put($queryUrl, $headers, $body);
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
             return $response;
@@ -88,8 +87,8 @@ class RegulationController {
                 $addressId) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address/{addressId}';
@@ -112,8 +111,7 @@ class RegulationController {
         //prepare API request
         $response = Request::delete($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -131,8 +129,8 @@ class RegulationController {
                 $addressId) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address/{addressId}';
@@ -154,8 +152,7 @@ class RegulationController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -197,8 +194,8 @@ class RegulationController {
                 $zipCode = NULL) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address';
@@ -232,8 +229,7 @@ class RegulationController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -253,8 +249,8 @@ class RegulationController {
                 $didIds) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address/{addressId}/link';
@@ -277,8 +273,7 @@ class RegulationController {
         //prepare API request
         $response = Request::post($queryUrl, $headers, json_encode($didIds));
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -296,8 +291,8 @@ class RegulationController {
                 $didIds) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address/unlink';
@@ -315,8 +310,7 @@ class RegulationController {
         //prepare API request
         $response = Request::post($queryUrl, $headers, json_encode($didIds));
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -340,8 +334,8 @@ class RegulationController {
                 $areaCode = NULL) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/zipcode';
@@ -366,8 +360,7 @@ class RegulationController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
             return $response;
@@ -386,8 +379,8 @@ class RegulationController {
                 $proof) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address/{addressId}/proof';
@@ -413,8 +406,7 @@ class RegulationController {
                 ."\n".'--XXX--';
         //prepare API request
         $response = Request::put($queryUrl, $headers, $body);
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
             return $response;
@@ -431,8 +423,8 @@ class RegulationController {
                 $addressId) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address/{addressId}/verification';
@@ -455,8 +447,7 @@ class RegulationController {
         //prepare API request
         $response = Request::put($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -478,8 +469,8 @@ class RegulationController {
                 $destinationCountryCodeA3) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/regulation/address/{addressId}/validation';
@@ -507,8 +498,7 @@ class RegulationController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK

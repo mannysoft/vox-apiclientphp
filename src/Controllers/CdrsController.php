@@ -25,8 +25,7 @@ class CdrsController {
                 $month) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/cdrs/cdrsfile/request/{year}/{month}';
@@ -49,8 +48,7 @@ class CdrsController {
 
         //prepare API request
         $response = Request::post($queryUrl, $headers);
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -66,8 +64,7 @@ class CdrsController {
     public function getCdrsFiles () 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/cdrs/cdrsfile';
@@ -84,8 +81,7 @@ class CdrsController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
@@ -103,8 +99,7 @@ class CdrsController {
                 $fileName) 
     {
         //the base uri for api requests
-        $queryBuilder = Configuration::BASEURI;
-        $queryBuilder = Config::get('voxbone.base_uri');
+        $queryBuilder = config('voxbone.base_uri');
         
         //prepare query string for API call
         $queryBuilder = $queryBuilder.'/cdrs/cdrsfile/{fileName}';
@@ -125,8 +120,7 @@ class CdrsController {
         //prepare API request
         $response = Request::get($queryUrl, $headers);
 
-        //and invoke the API call request to fetch the response
-        //$response = Unirest::getResponse($request);
+        
 
         //Error handling using HTTP status codes
         if (($response->code < 200) || ($response->code > 206)) { //[200,206] = HTTP OK
