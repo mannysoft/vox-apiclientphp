@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "APIv3SandboxLib\\": "src/"
+            "Mannysoft\\": "src/"
         }
     }
 }
